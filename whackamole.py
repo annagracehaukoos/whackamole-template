@@ -17,7 +17,10 @@ def main():
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     print(event.pos)
             screen.fill("light green")
-            pygame.draw.line(screen, "black", (32, 0), (32, 512))
+            for i in range(1, 20):
+                pygame.draw.line(screen,"black",(i*32, 0),(i*32, 512))
+            for i in range(1, 20):
+                pygame.draw.line(screen, "black", (0, i*32), (640,i*32))
             screen.blit(mole_image, mole_image.get_rect(topleft=(0, 0)))
             pygame.display.flip()
             clock.tick(60)
